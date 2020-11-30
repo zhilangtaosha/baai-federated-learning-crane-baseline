@@ -1,5 +1,5 @@
-# 首届国网北京市电力人工智能数据竞赛——液压吊车目标检测赛道
-以下为首届国网北京市电力人工智能数据竞赛——液压吊车目标检测赛道基准模型介绍。其中包含了智源联邦学习框架的简化版本（真实版本后期会以论文的形式发布）、智源整理标注的初赛吊车数据集和基于YOLOv3模型完成的实验。
+# 电力人工智能数据竞赛—液压吊车目标检测赛道
+以下为电力人工智能数据竞赛—液压吊车目标检测赛道基准模型介绍。其中包含了智源联邦学习框架的简化版本（真实版本后期会以论文的形式发布）、智源整理标注的初赛吊车数据集和基于YOLOv3模型完成的实验。
 
 ## 环境要求
 * gevent==1.4.0
@@ -110,8 +110,12 @@
 
 ## 下载地址
 * [初赛吊车数据集](https://open.baai.ac.cn/data-set-detail/MTI2NTI=/Njk=/true)  
-其中智源客户端的数据集包括`preliminary_contest_crane_federal/annotations`下面的`train1.json`，`val1.json`，`test.json`，`test_image_info.json`和`preliminary_contest_crane_federal/images`下面的`train1`，`val1`，`test`；  
-国网电力客户端的数据集包括`preliminary_contest_crane_federal/annotations`下面的`train2.json`，`val2.json`，`test.json`，`test_image_info.json`和`preliminary_contest_crane_federal/images`下面的`train2`，`val2`，`test`；  
+  * 其中智源客户端的数据集包括
+     * `preliminary_contest_crane_federal/annotations`下面的`/train1.json`，`val1.json`，`test.json`，`test_image_info.json`
+     * `preliminary_contest_crane_federal/images`下面的`/train1`，`val1`，`test`  
+  * 国网电力客户端的数据集包括
+     * `preliminary_contest_crane_federal/annotations`下面的`train2.json`，`val2.json`，`test.json`，`test_image_info.json`
+     * `preliminary_contest_crane_federal/images`下面的`train2`，`val2`，`test`；  
 * [yolov3预训练模型](http://dorc-data.ks3-cn-beijing.ksyun.com/2015682aasdf154asdfe5d5aq961fa6eg/weights_yolov3_pre_model/weights.tar.gz)  
 当前主要采用`weights`下面的`darknet53.conv.74`
 ## 运行方式
@@ -119,7 +123,7 @@
 * 进入`baai-client/service/federated/config/preliminary_contest_crane_federal`目录
   * 修改`preliminary_contest_crane_federal.data`当中的数据路径
   * 生成`yolov3`模型的`cfg`文件  
-  `bash create_preliminary_contest_crane_federal_model.sh 2`
+  `bash create_preliminary_contest_crane_federal_model.sh 1`
 * 进入`baai-client/config`
   * 修改`project_conf.py`当中的`host`和`port`
 * 进入`baai-client/service/federated/utils`目录
@@ -133,7 +137,7 @@
 * 进入`sgcc-client/service/federated/config/preliminary_contest_crane_federal`目录
   * 修改`preliminary_contest_crane_federal.data`当中的数据路径
   * 生成`yolov3`模型的`cfg`文件  
-  `bash create_preliminary_contest_crane_federal_model.sh 2`
+  `bash create_preliminary_contest_crane_federal_model.sh 1`
 * 进入`sgcc-client/config`
   * 修改`project_conf.py`当中的`host`和`port`
 * 进入`sgcc-client/service/federated/utils`目录
@@ -147,7 +151,7 @@
 * 把下载好的[yolov3预训练模型](http://dorc-data.ks3-cn-beijing.ksyun.com/2015682aasdf154asdfe5d5aq961fa6eg/weights_yolov3_pre_model/weights.tar.gz)拷贝到`contestant-server/service/federated/weights`
 * 进入`contestant-server/service/federated/config/preliminary_contest_crane_federal`目录
   * 生成`yolov3`模型的`cfg`文件  
-  `bash create_preliminary_contest_crane_federal_model.sh 2`
+  `bash create_preliminary_contest_crane_federal_model.sh 1`
 * 进入`contestant-server/config`
   * 修改`project_conf.py`当中的`host`和`port`
 * 进入`contestant-server/service/federated/utils`目录
@@ -179,7 +183,7 @@
 <td>Crane</td> <td>0.21124</td> <td>0.77201</td> <td>0.33172</td> <td>0.40716</td>
 </tr>
 <tr>
-<td>2</td>
+<td>1</td>
 <td>Total</td> <td>0.21124</td> <td>0.77201</td> <td>0.33172</td> <td>0.40716</td>
 </tr>
 </tbody>
