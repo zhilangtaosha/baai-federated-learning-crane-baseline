@@ -16,7 +16,7 @@ def args_parser():
     parser.add_argument('--model', type=str, default='yolov3', help='model name: M')
     parser.add_argument("--model_def", type=str, default="service/federated/config/preliminary_contest_crane_federal/yolov3_preliminary_contest_crane_federal.cfg",
                         help="path to model definition file")
-    parser.add_argument("--pretrained_weights", type=str, default="/data/ntxie/Data/SGCC/weights/darknet53.conv.74", 
+    parser.add_argument("--pretrained_weights", type=str, default="your/weights/path/weights/darknet53.conv.74",
                         help="if specified starts from checkpoint model")
 
     # other parameters

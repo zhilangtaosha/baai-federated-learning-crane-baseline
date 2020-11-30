@@ -1,7 +1,7 @@
 classes=1
 
-train=/data/ntxie/Data/SGCC/preliminary_contest_crane_federal/annotations/train1.json
-valid=/data/ntxie/Data/SGCC/preliminary_contest_crane_federal/annotations/val1.json
-test=/data/ntxie/Data/SGCC/preliminary_contest_crane_federal/annotations/test.json
-detect=/data/ntxie/Data/SGCC/preliminary_contest_crane_federal/annotations/test_image_info.json
-names=/data/ntxie/Data/SGCC/preliminary_contest_crane_federal/annotations/train1.json
+train=your/data/path/preliminary_contest_crane_federal/annotations/train1.json
+valid=your/data/path/preliminary_contest_crane_federal/annotations/val1.json
+test=your/data/path/preliminary_contest_crane_federal/annotations/test.json
+detect=your/data/path/preliminary_contest_crane_federal/annotations/test_image_info.json
+names=your/data/path/preliminary_contest_crane_federal/annotations/train1.json
